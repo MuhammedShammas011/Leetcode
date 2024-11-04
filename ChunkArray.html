@@ -7,17 +7,16 @@
 </head>
 <body>
     <script>
-let chunk= (arr, size) =>{
+ let chunk = (arr, size) => {
   const chunkedArray = [];
-  let index = 0;
 
-  while (index < arr.length) {
+  for (let index = 0; index < arr.length; index += size) {
     chunkedArray.push(arr.slice(index, index + size));
-    index += size;
   }
 
   return chunkedArray;
-}
+};
+
     </script>
     
 </body>
