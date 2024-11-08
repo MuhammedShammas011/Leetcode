@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkIfPangram(sentence) {
+    const letters = new Set();
+    for (let i = 0; i < sentence.length; i++) {
+        letters.add(sentence[i]);
+    }
+    return letters.size === 26;
+}
+console.log(checkIfPangram("thequickbrownfoxjumpsoverthelazydog")); 
+
+
+    </script>
+    
+</body>
+</html>
