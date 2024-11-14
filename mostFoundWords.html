@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var mostWordsFound = function(sentences) {
+        let words
+        let length = 0
+        for(let i=0;i<sentences.length;i++){
+            words = sentences[i].split(' ').length
+            if(words>length){
+                length = words
+            }
+        }
+        return length
+    };
+    </script>
+</body>
+</html>
