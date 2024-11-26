@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var customSortString = function(order, s) {
+    let a="",x;
+
+for(let i in order){
+    for(let j in s){
+        if(order[i]==s[j]){
+            a+=s[j];
+        }
+    }
+}
+
+for(x=0;x<s.length;x++){
+    if(order.includes(s[x])==false){
+     a+=s[x]  ; 
+    }}
+return(a)
+    
+};
+    </script>
+
+    
+</body>
+</html>
