@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let permute = function(nums) {
+    if (nums.length === 1) {
+        return [nums.slice()];
+    }
+    
+    let result = [];
+
+    for (let i = 0; i < nums.length; i++) {
+        let n = nums.shift();
+        let permu = permute(nums.slice());
+
+        for (let p of permu) {
+            p.push(n);
+        }
+        
+        result.push(...permu);
+        nums.push(n);
+    }
+    return result;  
+};
+    </script>
+    
+</body>
+</html>
