@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+var join = function(arr1, arr2) {
+    const Result = {};
+    arr1.forEach(item => {
+        Result[item.id] = item;
+    });
+    arr2.forEach(item => {
+        if (Result[item.id]) {
+            Object.keys(item).forEach(key => {
+                Result[item.id][key] = item[key];    
+            });
+        } else {
+            Result[item.id] = item;
+        }
+    });
+
+    return Object.values(Result);
+};
+    </script>
+    
+</body>
+</html>
